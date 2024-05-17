@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 class Main{
     static Scanner input = new Scanner(System.in);
-    static String sId [][] = new String[0][2];
+    static String student [][] = new String[0][2];
     static double mark[][] = new double[0][2];
 
     public static void main(String args[]){
@@ -121,11 +121,11 @@ class Main{
 
             while(true){
                 System.out.print("\nEnter Student ID : ");
-                sId[sId.length-1][0] = input.next();
+                student[student.length-1][0] = input.next();
 
                 int count=0;
-                for(int i=0; i<sId.length-1; i++){
-                    if(sId[sId.length-1][0].equals(sId[i][0])){
+                for(int i=0; i<student.length-1; i++){
+                    if(student[student.length-1][0].equals(student[i][0])){
                         count++;
                     }
                 }
@@ -138,7 +138,7 @@ class Main{
             }
 
             System.out.print("Enter Student name : ");
-            sId[sId.length-1][1] = input.next();
+            student[student.length-1][1] = input.next();
             System.out.println();
 
 
@@ -169,12 +169,12 @@ class Main{
 
             while(true){
                 System.out.print("\nEnter Student ID : ");
-                sId[sId.length-1][0] = input.next();
+                student[student.length-1][0] = input.next();
 
                 int count=0;
 
-                for(int i=0; i<sId.length-1; i++){
-                    if(sId[sId.length-1][0].equals(sId[i][0])){
+                for(int i=0; i<student.length-1; i++){
+                    if(student[student.length-1][0].equals(student[i][0])){
                         count++;
                     }
                 }
@@ -187,7 +187,7 @@ class Main{
             }
 
             System.out.print("Enter Student name : ");
-            sId[sId.length-1][1] = input.next();
+            student[student.length-1][1] = input.next();
             System.out.println();
 
             while(true){
@@ -244,8 +244,8 @@ class Main{
                 System.out.print("\nEnter Student ID : ");
                 String id = input.next();
 
-                for(int i=0; i<sId.length; i++){
-                    if(id.equals(sId[i][0])){
+                for(int i=0; i<student.length; i++){
+                    if(id.equals(student[i][0])){
                         idNo=i;
                     }
                 }
@@ -265,7 +265,7 @@ class Main{
                     }
 
                 }else{
-                    System.out.println("Student name : " + sId[idNo][1]);
+                    System.out.println("Student name : " + student[idNo][1]);
                     break;
                 }
                 if(option.equalsIgnoreCase("n")){
@@ -341,8 +341,8 @@ class Main{
                 System.out.print("\nEnter Student ID : ");
                 String id = input.next();
 
-                for(int i=0; i<sId.length; i++){
-                    if(id.equals(sId[i][0])){
+                for(int i=0; i<student.length; i++){
+                    if(id.equals(student[i][0])){
                         idNo=i;
                     }
                 }
@@ -363,7 +363,7 @@ class Main{
 
 
                 }else{
-                    System.out.println("Student name : "+sId[idNo][1]);
+                    System.out.println("Student name : "+student[idNo][1]);
                     break;
                 }
             }
@@ -372,7 +372,7 @@ class Main{
             }
 
             System.out.print("\nEnter new student name : ");
-            sId[idNo][1] = input.next();
+            student[idNo][1] = input.next();
 
             System.out.println("Student details has been updated successfully.");
 
@@ -403,8 +403,8 @@ class Main{
                 System.out.print("\nEnter Student ID : ");
                 String id = input.next();
 
-                for(int i=0; i<sId.length; i++){
-                    if(id.equals(sId[i][0])){
+                for(int i=0; i<student.length; i++){
+                    if(id.equals(student[i][0])){
                         idNo = i;
                     }
                 }
@@ -438,7 +438,7 @@ class Main{
                     }
 
                 }else{
-                    System.out.println("Student name : "+ sId[idNo][1]);
+                    System.out.println("Student name : "+ student[idNo][1]);
 
                     System.out.println("Programming Fundamentals Marks : " + mark[idNo][0]);
                     System.out.println("Database Management Systems Marks : " + mark[idNo][1]);
@@ -501,8 +501,8 @@ class Main{
             System.out.print("\nEnter Student ID : ");
             String id = input.next();
 
-            for(int i=0; i<sId.length; i++){
-                if(id.equals(sId[i][0])){
+            for(int i=0; i<student.length; i++){
+                if(id.equals(student[i][0])){
                     idNo=i;
                 }
             }
@@ -522,20 +522,20 @@ class Main{
                 }
 
             }else{
-                String tempsId[][] = new String[sId.length][2];
-                double tempMarks[][] = new double[sId.length][2];
+                String tempsId[][] = new String[student.length][2];
+                double tempMarks[][] = new double[student.length][2];
 
-                for(int i=0; i<sId.length;i++){
-                    for(int j=0; j<sId[i].length;j++){
+                for(int i=0; i<student.length;i++){
+                    for(int j=0; j<student[i].length;j++){
                         if(idNo!=i){
-                            tempsId[i][j] = sId[i][j];
+                            tempsId[i][j] = student[i][j];
                             tempMarks[i][j] = mark[i][j];
                         }
 
                     }
                 }
 
-                sId = tempsId;
+                student = tempsId;
                 mark = tempMarks;
 
                 System.out.println("Student has benn deleted successfully.");
@@ -567,8 +567,8 @@ class Main{
             System.out.print("\nEnter Student ID : ");
             String id = input.next();
 
-            for(int i=0; i<sId.length;i++){
-                if(id.equals(sId[i][0])){
+            for(int i=0; i<student.length;i++){
+                if(id.equals(student[i][0])){
                     idNo = i;
                 }
             }
@@ -587,7 +587,7 @@ class Main{
                     }
                 }
             }else {
-                System.out.println("Student name : " + sId[idNo][1]);
+                System.out.println("Student name : " + student[idNo][1]);
 
                 if(mark[idNo][0]==0 || mark[idNo][1]==0){
                     System.out.println("\nMarks yet to be added.");
@@ -746,17 +746,17 @@ class Main{
 
 
     public static void extendArray(){//This one is extend array.
-        String tempsId[][] = new String[sId.length+1][2];
-        double tempMarks[][] = new double[sId.length+1][2];
+        String tempsId[][] = new String[student.length+1][2];
+        double tempMarks[][] = new double[student.length+1][2];
 
-        for(int i=0; i<sId.length;i++){
-            for(int j=0; j<sId[i].length;j++){
-                tempsId[i][j] = sId[i][j];
+        for(int i=0; i<student.length;i++){
+            for(int j=0; j<student[i].length;j++){
+                tempsId[i][j] = student[i][j];
                 tempMarks[i][j] = mark[i][j];
             }
         }
 
-        sId = tempsId;
+        student = tempsId;
         mark = tempMarks;
     }
 
@@ -883,8 +883,8 @@ class Main{
         for (int i=0; i<desc.length; i++){
             for(int j=0; j<avg.length; j++){
                 if(desc[i]==avg[j]){
-                    tempsId[i][0] = sId[j][0];
-                    tempsId[i][1] = sId[j][1];
+                    tempsId[i][0] = student[j][0];
+                    tempsId[i][1] = student[j][1];
                 }
 
             }
